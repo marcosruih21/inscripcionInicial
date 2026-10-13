@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            prefWidth="760.0"
+            prefHeight="680.0"
+            fx:controller="es.aula.inscripcion.InscripcionController"
+            styleClass="pantalla"
+            stylesheets="@estilos.css">
+    <top>
+        <VBox spacing="8">
+            <padding>
+                <Insets top="28" right="35" bottom="20" left="35"/>
+            </padding>
+
+            <Label text="Inscripción al torneo"
+                   styleClass="titulo-pantalla"/>
+
+            <Label text="Completa los datos para preparar tu resumen."
+                   styleClass="texto-descripcion"/>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="18">
+            <padding>
+                <Insets top="5" right="35" bottom="20" left="35"/>
+            </padding>
+
+            <VBox spacing="16" styleClass="tarjeta">
+                <Label text="Datos del participante"
+                       styleClass="titulo-seccion"/>
+
+                <GridPane hgap="18" vgap="16">
+
+                    <columnConstraints>
+                        <ColumnConstraints minWidth="175"
+                                           prefWidth="190"/>
+                        <ColumnConstraints hgrow="ALWAYS"
+                                           fillWidth="true"/>
+                    </columnConstraints>
+
+                    <Label text="Nombre del participante"
+                           styleClass="etiqueta"
+                           GridPane.columnIndex="0"
+                           GridPane.rowIndex="0"/>
+
+                    <TextField fx:id="nombreField"
+                               promptText="Escribe tu nombre"
+                               maxWidth="Infinity"
+                               GridPane.columnIndex="1"
+                               GridPane.rowIndex="0"/>
+
+                    <Label text="Modalidad"
+                           styleClass="etiqueta"
+                           GridPane.columnIndex="0"
+                           GridPane.rowIndex="1"/>
+
+                    <ComboBox fx:id="modalidadCombo"
+                              promptText="Selecciona un videojuego"
+                              maxWidth="Infinity"
+                              GridPane.columnIndex="1"
+                              GridPane.rowIndex="1"/>
+
+                    <Label text="Fecha del torneo"
+                           styleClass="etiqueta"
+                           GridPane.columnIndex="0"
+                           GridPane.rowIndex="2"/>
+
+                    <DatePicker fx:id="fechaPicker"
+                                promptText="Selecciona una fecha"
+                                maxWidth="Infinity"
+                                GridPane.columnIndex="1"
+                                GridPane.rowIndex="2"/>
+
+                    <Label text="Material adicional"
+                           styleClass="etiqueta"
+                           GridPane.columnIndex="0"
+                           GridPane.rowIndex="3"/>
+
+                    <CheckBox fx:id="materialCheck"
+                              text="Necesito material"
+                              GridPane.columnIndex="1"
+                              GridPane.rowIndex="3"/>
+
+                    <Label text="Observaciones"
+                           styleClass="etiqueta"
+                           GridPane.columnIndex="0"
+                           GridPane.rowIndex="4"/>
+
+                    <TextArea fx:id="observacionesArea"
+                              promptText="Escribe aquí tus observaciones..."
+                              wrapText="true"
+                              prefRowCount="3"
+                              maxWidth="Infinity"
+                              GridPane.columnIndex="1"
+                              GridPane.rowIndex="4"/>
+
+                    <rowConstraints>
+                    </rowConstraints>
+
+                </GridPane>
+            </VBox>
+
+            <VBox spacing="10" styleClass="tarjeta">
+                <Label text="Resumen de la inscripción"
+                       styleClass="titulo-seccion"/>
+
+                <Label fx:id="resumenLabel"
+                       text='Pulsa "Mostrar resumen" para consultar los datos introducidos.'
+                       wrapText="true"
+                       minHeight="65"
+                       styleClass="texto-resumen"/>
+            </VBox>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="12">
+            <padding>
+                <Insets top="5" right="35" bottom="25" left="35"/>
+            </padding>
+
+          <Button fx:id="volverButton"
+        text="Volver"
+        onAction="#volverInicio"
+        styleClass="boton-secundario"
+        prefHeight="42"/>
+
+            <Button fx:id="mostrarResumenButton"
+        text="Mostrar resumen"
+        onAction="#mostrarResumen"
+        styleClass="boton-principal"
+        prefHeight="42"
+        defaultButton="true"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

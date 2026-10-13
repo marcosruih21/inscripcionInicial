@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER"
+      minHeight="100.0"
+      minWidth="200.0"
+      prefHeight="182.0"
+      prefWidth="400.0"
+      spacing="12.0"
+      fx:controller="es.aula.inscripcion.BienvenidaController"
+      stylesheets="@estilos.css"
+      styleClass="pantalla"
+      xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets bottom="24.0" left="24.0" right="24.0" top="-50.0" />
+    </padding>
+    <children>
+      <Label text="GAMEZONE" styleClass="titulo-principal">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="50.0" />
+         </VBox.margin>
+      </Label>
+      <Label text="Torneo de videojuegos" styleClass="subtitulo">
+         <VBox.margin>
+            <Insets top="-20.0" />
+         </VBox.margin>
+      </Label>
+      <Label text="Participa en nuestro torneo y elige tu modalidad favorita" styleClass="texto-descripcion" />
+      <Button mnemonicParsing="false" prefWidth="100.0" styleClass="boton-principal" fx:id="inscribirseButton" text="Inscribirse" onAction="#abrirInscripcion" >
+     
+      </Button>
+    </children>
+</VBox>
