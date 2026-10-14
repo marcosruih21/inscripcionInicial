@@ -49,10 +49,16 @@ utilizado en clase (en Eclipse: Team > Share Project > Git).
 Haz un primer commit de la plantilla y otro significativo al finalizar cada sesión.
 Entrega el proyecto sin la carpeta target. Completa este README con:
 
-- Nombre del alumno:
-- Temática elegida:
-- Funcionalidades realizadas y pendientes:
-- Comprobación por un compañero y mejora realizada:
-- Uso de IA, si lo ha habido:
+- Nombre del alumno: Marcos Ruiz Haro
+
+- Temática elegida: Videojuegos
+
+- Funcionalidades realizadas y pendientes: Pantalla de bienvenida y acceso al formulario, Formulario con nombre, modalidad, fecha, casilla adicional y observaciones.
+, Resumen actualizado con los valores actuales,navegación entre vistas en la misma ventana.  
+  No quedan funcionalidades pendientes pero si se podria mejorar el diseño de la pantalla principal
+
+- Comprobación por un compañero y mejora realizada: El compañero no ha tenido muchas dificultades. He mejorado un boton qye tenia poca visibilidad y poco mas.
+
+- Uso de IA, si lo ha habido:Se ha utilizado ChatGPT como apoyo para organizar la memoria y planificar los pasos de implementación. El código final se ha revisado, probado y adaptado al proyecto de clase.
 
 Referencia de configuración: https://openjfx.io/openjfx-docs/

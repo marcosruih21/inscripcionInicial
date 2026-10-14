@@ -35,16 +35,14 @@ public class InscripcionController {
 
     @FXML
     public void initialize() {
-        modalidadCombo.getItems().addAll("FIFA / EA SPORTS FC","Fortnite","Minecraft");
+        modalidadCombo.getItems().addAll("EA SPORTS FC","Fortnite","Minecraft");
     }
 
     public void volverInicio(ActionEvent event)
             throws IOException {
 
-        Parent root = FXMLLoader.load(
-                getClass().getResource("/es/aula/inscripcion/bienvenida.fxml"));
-
-        cambiarPantalla(event, root, "GameZone");
+        Parent root = FXMLLoader.load(getClass().getResource("/es/aula/inscripcion/bienvenida.fxml"));
+         cambiarPantalla(event, root, "GameZone");
     }
 
     public void mostrarResumen(ActionEvent event)
@@ -55,8 +53,7 @@ public class InscripcionController {
         String fecha = "";
 
         if (fechaPicker.getValue() != null) {
-            fecha = fechaPicker.getValue().format(
-                    DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+            fecha = fechaPicker.getValue().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
         }
 
         String material;
@@ -73,8 +70,7 @@ public class InscripcionController {
             observaciones = "Sin observaciones";
         }
 
-        FXMLLoader loader = new FXMLLoader(
-                getClass().getResource("/es/aula/inscripcion/resumen.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/es/aula/inscripcion/resumen.fxml"));
 
         Parent root = loader.load();
 
@@ -90,9 +86,7 @@ public class InscripcionController {
 
         Scene scene = new Scene(root);
 
-        Stage stage = (Stage) ((Node) event.getSource())
-                .getScene().getWindow();
-
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.setTitle(titulo);
         stage.show();

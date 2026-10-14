@@ -53,16 +53,13 @@ public class ResumenController {
             throws IOException {
 
         Parent root = FXMLLoader.load(getClass().getResource("/es/aula/inscripcion/inscripcion.fxml"));
-
         cambiarPantalla(event, root, "GameZone - Inscripción");
     }
 
     public void volverInicio(ActionEvent event)
             throws IOException {
 
-        Parent root = FXMLLoader.load(
-                getClass().getResource("/es/aula/inscripcion/bienvenida.fxml"));
-
+        Parent root = FXMLLoader.load(getClass().getResource("/es/aula/inscripcion/bienvenida.fxml"));
         cambiarPantalla(event, root, "GameZone");
     }
 
@@ -71,9 +68,7 @@ public class ResumenController {
 
         Scene scene = new Scene(root);
 
-        Stage stage = (Stage) ((Node) event.getSource())
-                .getScene().getWindow();
-
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.setTitle(titulo);
         stage.show();
